@@ -1,6 +1,0 @@
-hr/algebra/movieapp/model/Movie.class
-hr/algebra/movieapp/MovieApp.class
-hr/algebra/movieapp/util/SqlUtils.class
-hr/algebra/movieapp/repository/MovieRepository.class
-hr/algebra/movieapp/app/Main.class
-hr/algebra/movieapp/config/Database.class
