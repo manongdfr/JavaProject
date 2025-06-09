@@ -1,0 +1,39 @@
+CREATE TABLE Genre (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Name NVARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Director (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    FirstName NVARCHAR(50),
+    LastName NVARCHAR(50)
+);
+
+CREATE TABLE Actor (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    FirstName NVARCHAR(50),
+    LastName NVARCHAR(50)
+);
+
+CREATE TABLE Movie (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Title NVARCHAR(100) NOT NULL,
+    Description NVARCHAR(MAX),
+    ReleaseYear INT,
+    GenreId INT FOREIGN KEY REFERENCES Genre(Id),
+    DirectorId INT FOREIGN KEY REFERENCES Director(Id),
+    ImagePath NVARCHAR(255)
+);
+
+CREATE TABLE MovieActor (
+    MovieId INT FOREIGN KEY REFERENCES Movie(Id),
+    ActorId INT FOREIGN KEY REFERENCES Actor(Id),
+    PRIMARY KEY (MovieId, ActorId)
+);
+
+CREATE TABLE AppUser (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Username NVARCHAR(50) UNIQUE NOT NULL,
+    PasswordHash NVARCHAR(255) NOT NULL,
+    Role NVARCHAR(20) NOT NULL CHECK (Role IN ('User', 'Admin'))
+);

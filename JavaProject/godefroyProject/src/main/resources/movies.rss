@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>My Movie Feed</title>
+    <link>http://localhost/</link>
+    <description>Test RSS pour mes films (avec images)</description>
+
+    <item>
+      <title>Oppenheimer</title>
+      <description>L'histoire d'Oppenheimer</description>
+      <year>2023</year>
+      <category>Biopic</category>
+      <director>Christopher Nolan</director>
+      <image>https://magazine.culturius.com/wp-content/uploads/2023/07/image-12.png</image>
+    </item>
+
+    <item>
+      <title>Dorian Gray</title>
+      <description>description</description>
+      <year>2009</year>
+      <category>Fantasy</category>
+      <director>Albert Lewin</director>
+      <image>https://www.cinehorizons.net/sites/default/files/affiches/Dorian-Gray.jpg</image>
+    </item>
+
+  </channel>
+</rss>

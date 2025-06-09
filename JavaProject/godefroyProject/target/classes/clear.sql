@@ -1,0 +1,4 @@
+DELETE FROM Movie;
+DELETE FROM Director;
+DELETE FROM Genre;
+DELETE FROM AppUser;
